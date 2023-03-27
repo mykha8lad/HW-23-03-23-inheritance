@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "k5OzxeSzgs4ZW0x97YOpiVWeeE/MZ1rxrWdQ/v4IuI6w6gDv80gFH0Z3T4H8r5j/U65HInqT01zaiXsgFsosEA==",
+  "dgSpecHash": "4IjqoUcYPM/XmxBdf5BtF/BSQKDnLyLd6/qSyWHik0phCKdF/bA6Jcl7CFiIUSmW79/PXXQl/2jO5lXTE5WdLg==",
   "success": true,
   "projectFilePath": "D:\\c#-projects\\HW_23_03_23_inheritance\\HW_23_03_23_inheritance\\HW_23_03_23_inheritance.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Влад\\.nuget\\packages\\faker.net\\2.0.154\\faker.net.2.0.154.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
