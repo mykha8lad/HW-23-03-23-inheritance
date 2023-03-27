@@ -3,9 +3,8 @@
     internal class Program
     {
         static void Main(string[] args)
-        {
-            Group gr = new Group();
-            Console.WriteLine(gr);
+        {            
+
         }
     }
 }

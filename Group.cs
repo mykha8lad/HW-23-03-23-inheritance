@@ -10,7 +10,7 @@ using ExceptionLibrary;
 namespace HW_23_03_23_inheritance
 {
     public class Group
-    {        
+    {
         RandomDataForGroup randomData = new RandomDataForGroup();
 
         private List<Student> students = new List<Student>();
@@ -192,6 +192,41 @@ namespace HW_23_03_23_inheritance
         {
             return firstGroup.StudentsInGroup > secondGroup.StudentsInGroup;
         }
+
+        public Student this[int index]
+        {
+            get
+            {
+                if (index < 0 || index > StudentsInGroup)
+                    throw new IndexerCountStudentsException(StudentsInGroup - 1);
+                return students[index];
+            }
+            set
+            {
+                if (index < 0 || index > StudentsInGroup)
+                    throw new IndexerCountStudentsException(StudentsInGroup - 1);
+                students[index] = value;
+            }
+        }
+        public Student this[string lastname]
+        {
+            get
+            {
+                Student student = students.Find(s => s.Lastname == lastname);
+                if (student == null)
+                    throw new IndexerLastnameStudentException(lastname);
+                return student;
+            }
+            set
+            {
+                Student student = students.Find(s => s.Lastname == lastname);
+                if (student == null)
+                    throw new IndexerLastnameStudentException(lastname);
+
+                int index = students.FindIndex(s => s.Lastname == lastname);
+                students[index] = value;
+            }
+        }
         // operator overloading
 
         public void createGroup(string groupName, string groupSpecialization, int courseNumber)
@@ -212,7 +247,7 @@ namespace HW_23_03_23_inheritance
                 DateTime birthday = new DateTime(random.Next(2003, 2007), random.Next(1, 13), random.Next(1, 29));
                 students.Add(new Student(Faker.Name.First(), Faker.Name.Last(), Faker.Name.Middle(), birthday, phoneNumber, Faker.Address.City(), Faker.Address.StreetName(), Faker.Address.ZipCode()));
             }
-        }                
+        }
 
         public void addStudentInGroup(Student student) { students.Add(student); }
 
