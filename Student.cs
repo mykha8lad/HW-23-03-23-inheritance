@@ -28,7 +28,9 @@ namespace HW_23_03_23_inheritance
         {
             set
             {
-                this.offsets = new List<int>();
+                if (value == null)
+                    throw new ArgumentException();
+                this.offsets = value;
             }
             get
             {
@@ -39,7 +41,9 @@ namespace HW_23_03_23_inheritance
         {
             set
             {
-                this.hometasks = new List<int>();
+                if (value == null)
+                    throw new ArgumentException();
+                this.hometasks = value;
             }
             get
             {
@@ -50,7 +54,9 @@ namespace HW_23_03_23_inheritance
         {
             set
             {
-                this.exams = new List<int>();
+                if (value == null)
+                    throw new ArgumentException();
+                this.exams = value;
             }
             get
             {

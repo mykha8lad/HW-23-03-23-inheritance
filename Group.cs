@@ -18,6 +18,8 @@ namespace HW_23_03_23_inheritance
         {
             set
             {
+                if (value == null)
+                    throw new ArgumentException();
                 students = value;
             }
             get
@@ -245,7 +247,7 @@ namespace HW_23_03_23_inheritance
                 } while (!Regex.IsMatch(phoneNumber, phoneRegexp));
                 Random random = new Random();
                 DateTime birthday = new DateTime(random.Next(2003, 2007), random.Next(1, 13), random.Next(1, 29));
-                students.Add(new Student(Faker.Name.First(), Faker.Name.Last(), Faker.Name.Middle(), birthday, phoneNumber, Faker.Address.City(), Faker.Address.StreetName(), Faker.Address.ZipCode()));
+                Students.Add(new Student(Faker.Name.First(), Faker.Name.Last(), Faker.Name.Middle(), birthday, phoneNumber, Faker.Address.City(), Faker.Address.StreetName(), Faker.Address.ZipCode()));
             }
         }
 
